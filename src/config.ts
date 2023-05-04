@@ -53,6 +53,9 @@ interface IConfig {
 	transcriptionEnabled: boolean;
 	transcriptionMode: TranscriptionMode;
 	transcriptionLanguage: string;
+
+	// My custom group
+	myGroupName: string;
 }
 
 // Config
@@ -101,7 +104,10 @@ export const config: IConfig = {
 	// Transcription
 	transcriptionEnabled: getEnvBooleanWithDefault("TRANSCRIPTION_ENABLED", false), // Default: false
 	transcriptionMode: getEnvTranscriptionMode(), // Default: local
-	transcriptionLanguage: process.env.TRANSCRIPTION_LANGUAGE || "" // Default: null
+	transcriptionLanguage: process.env.TRANSCRIPTION_LANGUAGE || "", // Default: null
+
+	// My custom group
+	myGroupName: process.env.MY_GROUP_NAME || "" // Default: ""
 };
 
 /**
