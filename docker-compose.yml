@@ -2,6 +2,7 @@ version: "3"
 services:
     whatsapp-chatgpt:
         build: .
+        container_name: whatsapp-chatgpt
         env_file:
             - .env
         volumes:
