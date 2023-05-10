@@ -7,5 +7,7 @@ services:
             - .env
         volumes:
             - session-data:/app/session
+        restart: unless-stopped
+
 volumes:
     session-data:
